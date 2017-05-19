@@ -83,11 +83,7 @@ def AddUser(request):
     }
     return render_to_response('blog/user.add.html',kwvars,RequestContext(request))
 
-@login_required
-@PermissionVerify()
-def EditUser(request,ID):
-    user = get_user_model().objects.get(id=ID)
-    if request.method == 'POST':
+
 
 
 
